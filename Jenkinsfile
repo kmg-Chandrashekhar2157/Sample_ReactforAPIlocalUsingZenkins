@@ -12,7 +12,7 @@ pipeline {
         IIS_SITE = 'ApiJenkins'
         IIS_APPPOOL = 'ApiJenkins'
         IIS_PATH = 'C:\\inetpub\\wwwroot\\ApiJenkins'
-        HEALTH_URL = 'http://localhost:8083'
+        HEALTH_URL = 'http://localhost:8083/api/health'
     }
 
     stages {
