@@ -58,5 +58,12 @@ app.MapGet("/api/health", () => Results.Ok(new
     service = "Poc.Api",
     timestamp = DateTimeOffset.UtcNow,
 }));
+app.MapGet("/api/debug/routes", (EndpointDataSource dataSource) =>
+{
+    return Results.Ok(dataSource.Endpoints
+        .OfType<RouteEndpoint>()
+        .Select(e => e.RoutePattern.RawText)
+        .OrderBy(x => x));
+});
 
 app.Run();
