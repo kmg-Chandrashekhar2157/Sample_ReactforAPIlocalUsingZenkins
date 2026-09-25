@@ -22,7 +22,7 @@ public class InMemoryTodoStore : ITodoStore
         Add("Wire the React frontend to the .NET API");
         Add("Read through Controllers/TodosController.cs");
 
-        var done = Add("Install the .NET SDK1");
+        var done = Add("Install the .NET SDK12");
         done.IsComplete = true;
     }
 
